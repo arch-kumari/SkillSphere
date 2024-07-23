@@ -1,0 +1,48 @@
+<div class="container">
+    <br><br>
+    <div class="row justify-content-center">
+      <ng-container *ngIf="course | async as courseDetails">
+        <div class="col-lg-8">
+          <div class="card mb-4" *ngFor="let courseWithInstructors of coursesWithInstructors">
+            <div class="card-img-top">
+              <img [src]="courseWithInstructors.course.courseImage" alt="Course Image" class="card-img">
+            </div>
+            <div class="card-body text-left">
+              <h2 class="section-title mb-4 text-center">{{ courseWithInstructors.course.title }}</h2>
+              <div class="row">
+                <div class="col">
+                  <!-- <h5 class="card-title">{{ courseWithInstructors.course.title }}</h5> -->
+                  <p class="card-text"><strong>Instructor :</strong> {{ courseWithInstructors.instructors.name }}</p>
+                  <p class="card-text"><strong>Price :</strong>${{ courseWithInstructors.course.price }}</p>
+                </div>
+              </div>
+              <div class="row mt-3 ">
+                <div class="col">
+                  <h3>Instructor Details</h3>
+                  <p><strong>Email:</strong> {{ courseWithInstructors.instructors.email }}</p>
+                  <p><strong>Phone:</strong> {{ courseWithInstructors.instructors.phoneNo }}</p>
+                  <p><strong>Expertise:</strong> {{ courseWithInstructors.instructors.expertise }}</p>
+                  <p><strong>Experience:</strong> {{ courseWithInstructors.instructors.experience }} years</p>
+                  <p><strong>Bio:</strong> {{ courseWithInstructors.instructors.bio }}</p>
+                  <p><strong>Age Range:</strong> 12-36</p>
+                  <p><strong>Venue:</strong> {{ courseWithInstructors.course.schedule[0].location }}</p>
+                  <p><strong>Duration:</strong> 3 hours</p>
+                  <p><strong>No. of Open Spots:</strong> 20</p>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col text-center">
+                  <a [routerLink]="['/classes/', courseWithInstructors.course.courseName]" routerLinkActive="active" queryParamsHandling="preserve" class="btn btn-primary">Reserve my spot</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <div class="text-center">Loading...</div>
+  </ng-template>
+  

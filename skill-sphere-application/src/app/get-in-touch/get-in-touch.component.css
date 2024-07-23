@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    color: #333;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.feature-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.feature-text {
+    color: #666;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "skillsphereteam07",
+  "version": "1.0.0",
+  "description": "Skill Sphere provides a wide range of activities spanning sports, arts, technology, and more for all age groups.​ Users can easily discover and book activities through Skill Sphere, saving time and effort.​ Skill Sphere fosters connections by bringing together like-minded individuals, creating a vibrant community of learners and enthusiasts",
+  "main": "./AppServer.js",
+  "keywords": [
+    "azure",
+    "boilerplate",
+    "express"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./AppServer.js",
+    "build": "tsc --sourcemap ./AppServer.ts"
+  },
+  "author": "Team07",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "bootstrap": "^5.3.3",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "express-session": "^1.18.0",
+    "express": "^4.19.2",
+    "jquery": "^3.7.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.12.13",
+    "mongoose": "^8.3.2",
+    "typescript": "^5.4.5"
+  }
+}

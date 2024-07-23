@@ -1,0 +1,74 @@
+<head>
+  <meta charset="utf-8">
+  <title>SKILL SPHERE</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Free HTML Templates" name="keywords">
+  <meta content="Free HTML Templates" name="description">
+
+  <!-- Favicon -->
+  <link href="../assets/images/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0 px-lg-2">
+      <a href="index.html" class="navbar-brand ml-lg-3">
+          <h1 class="m-0 text-uppercase text-primary"><img src="../assets/images/SkillSphereLogo.png"
+                  alt="Skill Sphere Logo" class="mr-3" style="height: 60px;">
+          </h1>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <div class="navbar-nav mx-auto py-0">
+              <a routerLink="/" *ngIf="!(authService.loggedIn$ | async) || (authService.userType$ | async) === 'student'" class="nav-link font-weight-bold text-dark" style="margin-right: 20px;">
+                  <i class="fas fa-home"></i> Home
+              </a>
+              <a routerLink="/instructor/dashboard" *ngIf="(authService.loggedIn$ | async) && (authService.userType$ | async) === 'instructor'" class="nav-link font-weight-bold text-dark" style="margin-right: 20px;">
+                <i class="fas fa-home"></i> Dashboard
+              </a>
+              <a routerLink="/classes" class="nav-item nav-link font-weight-bold text-dark" style="margin-right: 20px;">
+                  <i class="fas fa-book mr-1"></i> Our Classes
+              </a>
+              <a routerLink="/coaches" class="nav-item nav-link font-weight-bold text-dark" style="margin-right: 20px;">
+                  <i class="fas fa-user-tie mr-1"></i> Our Instructors
+              </a>
+              <a routerLink="/about-us" class="nav-item nav-link font-weight-bold text-dark" style="margin-right: 20px;">
+                  <i class="fas fa-info-circle mr-1"></i> About Us
+              </a>
+              <a routerLink="/contact-us" class="nav-item nav-link font-weight-bold text-dark" style="margin-right: 20px;">
+                  <i class="fas fa-envelope mr-1"></i> Get in Touch
+              </a>
+          </div>
+          <!-- Dropdown Menu -->
+          <div class="d-flex justify-content-end">
+            <ng-container *ngIf="!(authService.loggedIn$ | async)">
+              <button class="btn btn-primary mr-2" (click)="loginAsStudent()">Join as Student</button>
+              <button class="btn btn-outline-primary" (click)="loginAsInstructor()">Join as Instructor</button>
+            </ng-container>
+            <button *ngIf="authService.loggedIn$ | async" class="btn btn-primary" (click)="logout()">Logout</button>
+          </div>
+          
+      </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+
+
+<router-outlet />
+
+<app-footer></app-footer>
+
+

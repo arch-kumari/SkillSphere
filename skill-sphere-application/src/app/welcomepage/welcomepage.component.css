@@ -1,0 +1,386 @@
+/* Styles for Welcome Page */
+
+/* Navbar styles */
+.navbar {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  
+  .navbar-brand img {
+    height: 60px;
+  }
+  
+  .nav-item.dropdown .dropdown-menu {
+    background-color: #ffffff;
+  }
+  
+  /* Header styles */
+  .page-header {
+    margin-bottom: 90px;
+    background-image: url('/images/header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: #ffffff;
+  }
+  
+  /* Search input styles */
+  .input-group-prepend .dropdown-toggle {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+  }
+  
+  .input-group-prepend .dropdown-toggle:hover {
+    background-color: #f2fdf2;
+    color: #000000;
+    border: #000000 1px solid;
+  }
+  
+  .input-group-append .btn-secondary {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+  }
+  
+  .input-group-append .btn-secondary:hover {
+    background-color: #f2fdf2;
+    color: #000000;
+    border: #000000 1px solid;
+  }
+  
+  /* About section styles */
+  .about-section {
+    background-color: #f8f9fa;
+    padding: 50px;
+  }
+  
+  /* Team section styles */
+  .team-member img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .team-name {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .team-role {
+    font-size: 16px;
+    color: #777777;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .footer .social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .footer .footer-link {
+    color: #ffffff;
+    margin-right: 20px;
+  }
+  
+  .team-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.team-members {
+    overflow: hidden; /* Hide overflow for the container */
+}
+
+.team-scroll {
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+.team-member-card {
+    width: 300px; /* Adjust card width as needed */
+    flex: 0 0 auto; /* Maintain card size */
+    margin-right: 10px; /* Adjust margin between cards */
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    background-color: white; /* Button background color */
+    border: 1px solid black; /* Button border */
+    cursor: pointer; /* Cursor style */
+}
+
+
+/* Styles for Welcome Page */
+
+/* Navbar styles */
+.navbar {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  background-color: #ffffff;
+}
+
+/* Header styles */
+.page-header {
+  margin-bottom: 90px;
+  background-image: url('/images/header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  color: #ffffff;
+}
+
+/* Search input styles */
+.input-group-prepend .dropdown-toggle {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.input-group-prepend .dropdown-toggle:hover {
+  background-color: #f2fdf2;
+  color: #000000;
+  border: #000000 1px solid;
+}
+
+.input-group-append .btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.input-group-append .btn-secondary:hover {
+  background-color: #f2fdf2;
+  color: #000000;
+  border: #000000 1px solid;
+}
+
+/* About section styles */
+.about-section {
+  background-color: #f8f9fa;
+  padding: 50px;
+}
+
+/* Team section styles */
+.team-member img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.team-name {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.team-role {
+  font-size: 16px;
+  color: #777777;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.footer .social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer .footer-link {
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.team-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+/* Scrollable card group */
+.container {
+position: relative;
+overflow: hidden;
+}
+
+.card-group {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+margin-bottom: 20px;
+}
+
+.card {
+flex: 0 0 auto;
+margin-right: 10px;
+width: 300px; /* Adjust card width as needed */
+}
+
+.team-member img {
+width: 100%;
+border-radius: 50%;
+}
+
+.container {
+position: relative;
+overflow: hidden;
+}
+
+.card-group {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+margin-bottom: 20px;
+}
+
+.card {
+flex: 0 0 auto;
+margin-right: 10px;
+width: 300px; /* Adjust card width as needed */
+}
+
+.scroll-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 40px;
+height: 40px;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+border: none;
+cursor: pointer;
+font-size: 24px;
+}
+
+.left {
+left: 10px; /* Adjust left position */
+}
+
+.right {
+right: 10px; /* Adjust right position */
+}
+
+
+/* Scroll buttons */
+.scroll-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 40px;
+height: 40px;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+border: none;
+cursor: pointer;
+font-size: 24px;
+}
+
+.left {
+left: 10px; /* Adjust left position */
+}
+
+.right {
+right: 10px; /* Adjust right position */
+}
+
+/* Add this to your existing SCSS file */
+.instructor-card-group {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+
+.instructor-card {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  width: 300px; /* Adjust card width as needed */
+}
+
+
+
+/* Add this to your existing SCSS file */
+.card-img-top img {
+  height: 190px; /* Adjust the height as needed to fit the card */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  object-position: center; /* Center the image within the container */
+}
+
+.square-icon {
+  width: 80px; /* Adjust the width as needed */
+  height: 40px; /* Set the height equal to the width to make it square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

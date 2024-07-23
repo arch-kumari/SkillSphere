@@ -1,0 +1,68 @@
+<div class="container">
+    <br><br><br>
+    <h2 class="section-title mb-4 text-center">Meet Our Instructors</h2>
+
+    <!-- Search Bar for Instructors -->
+    <!-- <div class="row justify-content-center mb-4">
+        <div class="col-lg-6 col-md-8">
+            <form class="form-inline" onsubmit="searchInstructors(event)">
+                <div class="form-group">
+                    <label for="searchName">Search by Name:</label>
+                    <input type="text" class="form-control ml-2" id="searchName" placeholder="Enter instructor's name">
+                </div>
+                <button type="submit" class="btn btn-primary ml-2">Search</button>
+            </form>
+        </div>
+    </div> -->
+
+    <div class="row" id="instructorsContainer">
+        <div class="col-lg-6 col-md-6 mb-4" *ngFor="let instructorsDetails of instructorsDetails">
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-auto">
+                        <!-- Add your course image here -->
+                        <div class="instructor-image">
+                            <img [src]="instructorsDetails.profileImage" alt="Course Image"
+                                class="rounded-circle">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ instructorsDetails.name }}</h3>
+                            <p class="card-text">
+                                <strong>Instructor:</strong> {{ instructorsDetails.name }}
+                                <br>
+                                <strong>Instructor Expertise:</strong> {{ instructorsDetails.expertise }}
+                                <br>
+                                <strong>Instructor Experience:</strong> {{ instructorsDetails.experience }}
+                                <br>
+                                <strong>Rating:</strong> {{ instructorsDetails.rating }} / 5
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    function searchInstructors(event) {
+        event.preventDefault(); // Prevent form submission
+        const searchName = document.getElementById('searchName').value.toLowerCase(); // Get search input value
+        console.log("Search term:", searchName); // Log search term for debugging
+        const instructorCards = document.querySelectorAll('.instructor-card'); // Get all instructor cards
+
+        instructorCards.forEach(card => {
+            const instructorName = card.querySelector('.card-title').innerText.toLowerCase(); // Get instructor name in lowercase
+            console.log("Instructor name:", instructorName); // Log instructor name for debugging
+            const cardStyle = card.style; // Get card style for display control
+            if (instructorName.includes(searchName)) {
+                cardStyle.display = 'block'; // Show card if the search term is found in instructor name
+            } else {
+                cardStyle.display = 'none'; // Hide card if the search term is not found in instructor name
+            }
+        });
+    }
+</script>

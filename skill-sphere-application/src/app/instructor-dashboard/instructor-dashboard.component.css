@@ -1,0 +1,57 @@
+/* Add this CSS in your style sheet or style section */
+.instructor-image {
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.instructor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instructor-card {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.instructor-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    float: left;
+}
+
+.card-img {
+    background-color: #f8f9fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    height: 100%; 
+  }
+  
+  .profile-image {
+    width: 100%; 
+    height: auto;
+    max-height: 100%; 
+    object-fit: cover; 
+  }
+  
+  .course-image {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+  }
+  
+  .text-center .btn {
+    margin: 8px; 
+  }
+  
+  
+  

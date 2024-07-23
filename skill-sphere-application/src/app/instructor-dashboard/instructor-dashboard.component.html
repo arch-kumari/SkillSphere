@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <br><br><br>
+  <h2 class="section-title mb-4 text-center">Instructor Dashboard</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4 text-center bg-light">
+        <div class="card-img">
+          <img [src]="instructorsDetails.profileImage" alt="Instructor Image" class="profile-image">
+        </div>
+        <h2 class="section-title">{{ instructorsDetails.name }}</h2>        
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="jumbotron bg-light">
+        <h3 class="section-title">{{ instructorsDetails.name }}</h3>                   
+        <hr class="my-4">    
+        <p ><strong>Expertise:</strong> {{ instructorsDetails.expertise }}</p>  
+        <p><strong>Email:</strong> {{ instructorsDetails.email }}</p>  
+        <p><strong>Experience:</strong> {{ instructorsDetails.experience }}</p>
+        <p><strong>Rating:</strong> {{ instructorsDetails.rating }}</p>
+        <p><strong>Contact:</strong> {{ instructorsDetails.phoneNo }}</p>
+        <p ><strong>Bio:</strong> {{ instructorsDetails.bio }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create New Course Button -->
+  <div class="mb-4 text-center">
+    <button class="btn btn-primary" (click)="createCourse()">Create New Course</button>
+  </div>
+
+  <!-- Courses List -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let course of courses">
+      <div class="card mb-4">
+        <img [src]="course.courseImage" alt="Course Image" class="card-img-top course-image">
+        <div class="card-body">
+          <h5 class="card-title">{{ course.title }}</h5>
+          <p class="card-text">{{ course.description }}</p>
+          <p class="card-text"><strong>Price: $</strong>{{ course.price }}</p>
+          <div class="text-center">
+            <button class="btn btn-warning" (click)="editCourse(course.courseName)">Edit</button>
+            <button class="btn btn-danger" routerLink="/#/instructor/dashboard" (click)="deleteCourse(course.courseID)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

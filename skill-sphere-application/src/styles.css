@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  
+  .navbar-left img {
+    width: 100px;
+  }
+  
+  .navbar-right button {
+    margin-left: 10px;
+  }
+  
+  /* Footer styles */
+  .fixed-footer {
+    margin-top: auto;
+    width: 100%;
+  }
+  
+  /* Section spacing */
+  .section-spacing {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  /* Custom link styling */
+  .dine-easy {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.2em;
+  }
+  
+  /* Custom search button */
+  .search-custom {
+    color: rgb(74, 132, 213);
+    border-color: rgb(74, 132, 213);
+  }
+  
+  /* Button container */
+  .buttons {
+    display: flex;
+    gap: 1cm;
+    text-transform: uppercase;
+  }
+  
+  /* Custom button styles */
+  .my-button {
+    background-color: #000000;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: small;
+    letter-spacing: 2px;
+  }
+  
+  .my-button:hover {
+    background-color: #f2fdf2;
+    color: #000000;
+    border: #000000 1px solid;
+  }
+  

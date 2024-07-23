@@ -1,0 +1,17 @@
+/* Footer styles */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .footer .social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .footer .footer-link {
+    color: #ffffff;
+    margin-right: 20px;
+  }
